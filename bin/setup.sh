@@ -22,10 +22,14 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
     echo "vendor path adjusted" && \
     cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_.htaccess ./.htaccess && \
     echo ".htaccess created" && \
-    php index.php tools install true&& \
+    php index.php tools install true && \
     echo "PepisCMS installed" && \
     php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD && \
     echo "Admin account created"
+
+echo "" >> application/config/config.php && \
+    echo "\$config['object_cache_is_enabled'] = true;" >> application/config/config.php && \
+    echo "Disabled application cache"
 
 chmod 0777 -R application/cache/ && \
     chmod 0777 -R application/config/ && \
