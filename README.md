@@ -1,2 +1,3 @@
-# pepiscms-demo
-PepisCMS demo project
+# PepisCMS Demo
+
+[https://pepiscms-demo.herokuapp.com/](https://pepiscms-demo.herokuapp.com/)
