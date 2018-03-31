@@ -21,7 +21,8 @@
     }
   ],
   "require": {
-    "piotrpolak/pepiscms": "dev-master"
+    "piotrpolak/pepiscms": "dev-master",
+    "ext-gd": "*"
   },
   "scripts": {
     "post-install-cmd": [
