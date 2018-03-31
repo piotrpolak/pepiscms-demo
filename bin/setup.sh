@@ -13,17 +13,8 @@ PEPIS_CMS_AUTH_PASSWORD=demodemo
 PEPIS_CMS_SITE_EMAIL=piotr@polak.ro
 PEPIS_CMS_SITE_NAME=Demonstration
 
-mysqldump -u "$PEPIS_CMS_DATABASE_USERNAME" \
-    -p "$PEPIS_CMS_DATABASE_PASSWORD" \
-    -h "$PEPIS_CMS_DATABASE_HOSTNAME" \
-    --add-drop-table --no-data "$PEPIS_CMS_DATABASE_DATABASE" | \
-    grep -e '^DROP \| FOREIGN_KEY_CHECKS' | \
-    mysql -u "$PEPIS_CMS_DATABASE_USERNAME" \
-    -p "$PEPIS_CMS_DATABASE_PASSWORD" \
-    -h "$PEPIS_CMS_DATABASE_HOSTNAME" \
-     "$PEPIS_CMS_DATABASE_DATABASE" && \
-     echo "MySQL database tables removed"
-
+composer update piotrpolak/pepiscms && \
+    echo "PepisCMS updated"
 
 cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.php ./index.php && \
     echo "index.php created" && \
@@ -31,13 +22,10 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
     echo "vendor path adjusted" && \
     cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_.htaccess ./.htaccess && \
     echo ".htaccess created" && \
-    php index.php tools install && \
+    php index.php tools install true&& \
     echo "PepisCMS installed" && \
     php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD && \
     echo "Admin account created"
-
-composer update piotrpolak/pepiscms && \
-    echo "PepisCMS updated"
 
 chmod 0777 -R application/cache/ application/config/ application/logs/ uploads/ && \
     echo "Access rights adjusted"
