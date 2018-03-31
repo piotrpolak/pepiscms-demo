@@ -20,4 +20,6 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
     php index.php tools install && \
     echo "PepisCMS installed" && \
     php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD && \
-    echo "Admin account created"
+    echo "Admin account created" && \
+    chmod 0777 -R aplication/cache/ aplication/config/ aplication/logs/ uploads/
+    echo "Access rights adjusted"
