@@ -12,8 +12,14 @@ PEPIS_CMS_SITE_EMAIL=piotr@polak.ro
 PEPIS_CMS_SITE_NAME=Demonstration
 
 composer install --prefer-dist && \
+    echo "Composer dependencies installed" &&\
     cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.php ./index.php && \
+    echo "index.php created" && \
     sed -i -e 's/TEMPLATE_VENDOR_PATH/\.\/vendor\//g' ./index.php && \
+    echo "vendor path adjusted" && \
     cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_.htaccess ./.htaccess && \
+    echo ".htaccess created" && \
     php index.php tools install && \
-    php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD
+    echo "PepisCMS installed" && \
+    php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD && \
+    echo "Admin account created"
