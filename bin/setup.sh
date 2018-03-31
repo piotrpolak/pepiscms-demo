@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # Database configuration is overwritten by Heroku
-#PEPIS_CMS_DATABASE_HOSTNAME=db
-#PEPIS_CMS_DATABASE_USERNAME=pepiscms
-#PEPIS_CMS_DATABASE_PASSWORD=pepiscms
-#PEPIS_CMS_DATABASE_DATABASE=pepiscms
+#export PEPIS_CMS_DATABASE_HOSTNAME=db
+#export PEPIS_CMS_DATABASE_USERNAME=pepiscms
+#export PEPIS_CMS_DATABASE_PASSWORD=pepiscms
+#export PEPIS_CMS_DATABASE_DATABASE=pepiscms
 
-PEPIS_CMS_DATABASE_CONFIG_TYPE=native
-PEPIS_CMS_AUTH_DRIVER=native
-PEPIS_CMS_AUTH_EMAIL=piotr@polak.ro
-PEPIS_CMS_AUTH_PASSWORD=demodemo
-PEPIS_CMS_SITE_EMAIL=piotr@polak.ro
-PEPIS_CMS_SITE_NAME=Demonstration
+export PEPIS_CMS_DATABASE_CONFIG_TYPE=native
+export PEPIS_CMS_AUTH_DRIVER=native
+export PEPIS_CMS_AUTH_EMAIL=demo@example.com
+export PEPIS_CMS_AUTH_PASSWORD=demodemo
+export PEPIS_CMS_SITE_EMAIL=noreply@example.com
+export PEPIS_CMS_SITE_NAME=Demonstration
 
 composer update piotrpolak/pepiscms && \
     echo "PepisCMS updated"
@@ -30,6 +30,12 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
 echo "" >> application/config/config.php && \
     echo "\$config['object_cache_is_enabled'] = true;" >> application/config/config.php && \
     echo "Disabled application cache"
+
+echo "" >> application/config/_pepiscms.php && \
+    echo "\$config['cms_login_page_description'] = 'Demo: $PEPIS_CMS_AUTH_EMAIL / $PEPIS_CMS_AUTH_PASSWORD';" >> application/config/_pepiscms.php && \
+    echo "Customized login page"
+
+
 
 chmod 0777 -R application/cache/ && \
     chmod 0777 -R application/config/ && \
