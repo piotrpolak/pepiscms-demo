@@ -27,9 +27,9 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
     php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD && \
     echo "Admin account created"
 
-echo "" >> application/config/config.php && \
-    echo "\$config['object_cache_is_enabled'] = true;" >> application/config/config.php && \
-    echo "Disabled application cache"
+#echo "" >> application/config/config.php && \
+#    echo "\$config['object_cache_is_enabled'] = true;" >> application/config/config.php && \
+#    echo "Disabled application cache"
 
 echo "" >> application/config/_pepiscms.php && \
     echo "\$config['cms_login_page_description'] = 'Demo: $PEPIS_CMS_AUTH_EMAIL / $PEPIS_CMS_AUTH_PASSWORD';" >> application/config/_pepiscms.php && \
