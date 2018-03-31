@@ -1,5 +1,0 @@
-build:
-  languages:
-    - php
-  pre:
-     - bin/setup.sh
