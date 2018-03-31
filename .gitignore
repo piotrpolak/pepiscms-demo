@@ -1,2 +1,8 @@
 .idea/
 vendor/
+.htaccess
+application/
+index.php
+robots.txt
+theme/
+uploads/
