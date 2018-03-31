@@ -27,15 +27,11 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
     php index.php tools register_admin $PEPIS_CMS_AUTH_EMAIL $PEPIS_CMS_AUTH_PASSWORD && \
     echo "Admin account created"
 
-#echo "" >> application/config/config.php && \
-#    echo "\$config['object_cache_is_enabled'] = true;" >> application/config/config.php && \
-#    echo "Disabled application cache"
+DEPLOY_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 
 echo "" >> application/config/_pepiscms.php && \
-    echo "\$config['cms_login_page_description'] = 'Demo: $PEPIS_CMS_AUTH_EMAIL / $PEPIS_CMS_AUTH_PASSWORD';" >> application/config/_pepiscms.php && \
+    echo "\$config['cms_login_page_description'] = '$PEPIS_CMS_AUTH_EMAIL / $PEPIS_CMS_AUTH_PASSWORD<br>Deployed at $DEPLOY_DATE';" >> application/config/_pepiscms.php && \
     echo "Customized login page"
-
-
 
 chmod 0777 -R application/cache/ && \
     chmod 0777 -R application/config/ && \
