@@ -1,26 +1,31 @@
 {
-    "name": "piotrpolak/pepiscms-demo",
-    "description": "PepisCMS demo",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Piotr Polak",
-            "email": "piotr@polak.ro"
-        }
-    ],
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/piotrpolak/pepiscms.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/piotrpolak/pepiscms-3rdparty.git"
-        }
-    ],
-    "require": {
-        "piotrpolak/pepiscms": "dev-master"
+  "name": "piotrpolak/pepiscms-demo",
+  "description": "PepisCMS demo",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Piotr Polak",
+      "email": "piotr@polak.ro"
     }
+  ],
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/piotrpolak/pepiscms.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/piotrpolak/pepiscms-3rdparty.git"
+    }
+  ],
+  "require": {
+    "piotrpolak/pepiscms": "dev-master"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "bin/setup.sh"
+    ]
+  }
 }
