@@ -22,7 +22,7 @@
   ],
   "require": {
     "piotrpolak/pepiscms": "dev-master",
-    "gd": "*"
+    "ext-gd": "*"
   },
   "scripts": {
     "post-install-cmd": [
