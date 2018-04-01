@@ -30,7 +30,7 @@ cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.
 DEPLOY_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 
 echo "" >> application/config/_pepiscms.php && \
-    echo "\$config['cms_login_page_description'] = '$PEPIS_CMS_AUTH_EMAIL / $PEPIS_CMS_AUTH_PASSWORD<br><br>All changes done to this demo application are reverted every time the application is redeployed.<br>Last deployed at $DEPLOY_DATE <script>(function() {\$("#user_email").val("demo@example.com");\$("#password").val("demodemo");})();</script>';" >> application/config/_pepiscms.php && \
+    echo "\$config['cms_login_page_description'] = '$PEPIS_CMS_AUTH_EMAIL / $PEPIS_CMS_AUTH_PASSWORD<br><br>All changes done to this demo application are reverted every time the application is redeployed.<br>Last deployed at $DEPLOY_DATE <script>(function() {\$(\"#user_email\").val(\"demo@example.com");\$(\"#password\").val(\"demodemo\");})();</script>';" >> application/config/_pepiscms.php && \
     echo "Customized login page"
 
 chmod 0777 -R application/cache/ && \
