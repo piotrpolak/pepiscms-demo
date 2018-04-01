@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41aa1a47c0d392dabf29f01efc48e912",
+    "content-hash": "689af84daf8455c0d96f07020fb5b80e",
     "packages": [
         {
             "name": "ckeditor/ckeditor",
@@ -86,12 +86,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/piotrpolak/pepiscms.git",
-                "reference": "675cef54e1eba121fc0acf2f073b98e838d53a7f"
+                "reference": "53957ffda4a75f8141d74d423681ea230f83d631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piotrpolak/pepiscms/zipball/675cef54e1eba121fc0acf2f073b98e838d53a7f",
-                "reference": "675cef54e1eba121fc0acf2f073b98e838d53a7f",
+                "url": "https://api.github.com/repos/piotrpolak/pepiscms/zipball/53957ffda4a75f8141d74d423681ea230f83d631",
+                "reference": "53957ffda4a75f8141d74d423681ea230f83d631",
                 "shasum": ""
             },
             "require": {
@@ -138,7 +138,7 @@
                 "source": "https://github.com/piotrpolak/pepiscms/tree/master",
                 "issues": "https://github.com/piotrpolak/pepiscms/issues"
             },
-            "time": "2018-03-31T21:03:14+00:00"
+            "time": "2018-03-31T21:32:14+00:00"
         },
         {
             "name": "piotrpolak/pepiscms-3rdparty",
@@ -177,6 +177,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-gd": "*"
+    },
     "platform-dev": []
 }
