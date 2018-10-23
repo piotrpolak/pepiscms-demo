@@ -18,7 +18,8 @@
   ],
   "require": {
     "piotrpolak/pepiscms": "dev-master",
-    "ext-gd": "*"
+    "ext-gd": "*",
+    "ext-mbstring": "*"
   },
   "scripts": {
     "post-install-cmd": [
