@@ -14,10 +14,6 @@
     {
       "type": "vcs",
       "url": "https://github.com/piotrpolak/pepiscms.git"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/piotrpolak/pepiscms-3rdparty.git"
     }
   ],
   "require": {

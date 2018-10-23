@@ -13,9 +13,6 @@ export PEPIS_CMS_AUTH_PASSWORD=demodemo
 export PEPIS_CMS_SITE_EMAIL=noreply@example.com
 export PEPIS_CMS_SITE_NAME=Demonstration
 
-composer update piotrpolak/pepiscms && \
-    echo "PepisCMS updated"
-
 cp vendor/piotrpolak/pepiscms/pepiscms/resources/config_template/template_index.php ./index.php && \
     echo "index.php created" && \
     sed -i -e 's/TEMPLATE_VENDOR_PATH/\.\/vendor\//g' ./index.php && \
