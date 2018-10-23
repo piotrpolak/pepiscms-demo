@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Database configuration is overwritten by Heroku
 #export PEPIS_CMS_DATABASE_HOSTNAME=db
