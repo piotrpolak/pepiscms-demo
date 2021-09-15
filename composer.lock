@@ -149,12 +149,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/piotrpolak/pepiscms.git",
-                "reference": "bdd75bc19e9661cc02b41f1dfa35822fdf15c652"
+                "reference": "d408ab221725cd04f08c28bd14d93bbbc5ac02b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piotrpolak/pepiscms/zipball/bdd75bc19e9661cc02b41f1dfa35822fdf15c652",
-                "reference": "bdd75bc19e9661cc02b41f1dfa35822fdf15c652",
+                "url": "https://api.github.com/repos/piotrpolak/pepiscms/zipball/d408ab221725cd04f08c28bd14d93bbbc5ac02b8",
+                "reference": "d408ab221725cd04f08c28bd14d93bbbc5ac02b8",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
                 "source": "https://github.com/piotrpolak/pepiscms/tree/master",
                 "issues": "https://github.com/piotrpolak/pepiscms/issues"
             },
-            "time": "2020-01-01T23:39:46+00:00"
+            "time": "2021-09-15T19:34:47+00:00"
         },
         {
             "name": "piotrpolak/pepiscms-3rdparty",
